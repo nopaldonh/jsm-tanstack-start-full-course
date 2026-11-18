@@ -1,0 +1,31 @@
+{
+  "bundler": "vite",
+  "projectName": "jsm-tanstack-start-full-course",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "npm",
+  "includeExamples": true,
+  "tailwind": true,
+  "projectPreset": "default",
+  "routerOnly": false,
+  "addOnOptions": {
+    "drizzle": {
+      "database": "postgresql"
+    }
+  },
+  "git": false,
+  "install": true,
+  "intent": true,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "eslint",
+    "nitro",
+    "compiler",
+    "drizzle",
+    "shadcn",
+    "t3env",
+    "better-auth",
+    "tanstack-query"
+  ]
+}
