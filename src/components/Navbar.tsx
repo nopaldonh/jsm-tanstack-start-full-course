@@ -1,5 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { LogInIcon } from 'lucide-react'
+import { Show } from './auth/Show'
+import { UserButton } from './auth/UserButton'
 
 export default function Navbar() {
   return (
@@ -14,10 +16,16 @@ export default function Navbar() {
       </div>
 
       <div className="actions">
-        <Link to="/sign-in/$" className="btn-primary">
-          <LogInIcon size={16} />
-          Sign in
-        </Link>
+        <Show when="signed-in">
+          <UserButton />
+        </Show>
+
+        <Show when="signed-out">
+          <Link to="/sign-in" className="btn-primary">
+            <LogInIcon size={16} />
+            Sign in
+          </Link>
+        </Show>
       </div>
     </nav>
   )
